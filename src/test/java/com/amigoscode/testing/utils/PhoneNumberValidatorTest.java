@@ -1,5 +1,6 @@
 package com.amigoscode.testing.utils;
 
+import org.junit.Test;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
@@ -21,6 +22,8 @@ class PhoneNumberValidatorTest {
             "+44700000000088878, false",
             "447000000000, false"
     })
+
+    @Test
     void itShouldValidatePhoneNumber(String phoneNumber, boolean expected) {
         // When
         boolean isValid = underTest.test(phoneNumber);
